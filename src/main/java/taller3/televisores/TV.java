@@ -9,10 +9,18 @@ public class TV {
     private Control control;
     static int numTV;
 
+    public void setnumTV() {
+        numTV++;
+    }
+
+    public int getnumTV() {
+        return numTV;
+    }
+
     TV(Marca marc, boolean status) {
         this.marca = marc;
         this.estado = status;
-        numTV++;
+        this.setnumTV();
     }
 
     public void turnOn() {
