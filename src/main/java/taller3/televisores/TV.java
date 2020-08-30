@@ -1,12 +1,12 @@
 package taller3.televisores;
 
 public class TV {
-    Marca marca;
-    int canal = 1;
-    int precio = 500;
-    boolean estado;
-    int volumen = 1;
-    Control control;
+    private Marca marca;
+    private int canal = 1;
+    private int precio = 500;
+    private boolean estado;
+    private int volumen = 1;
+    private Control control;
     static int numTV;
 
     TV(Marca marc, boolean status) {
@@ -16,84 +16,84 @@ public class TV {
     }
 
     public void turnOn() {
-        if (estado == false) {
-            estado = true;
+        if (this.estado == false) {
+            this.estado = true;
         }
     }
 
     public void turnOff() {
-        if (estado == true) {
-            estado = false;
+        if (this.estado == true) {
+            this.estado = false;
         }
     }
 
     public void canalUp() {
-        if (estado == true && canal < 120) {
-            canal++;
+        if (this.estado == true && this.canal < 120) {
+            this.canal++;
         }
     }
 
     public void canalDown() {
-        if (estado == true && canal > 1) {
-            canal--;
+        if (this.estado == true && this.canal > 1) {
+            this.canal--;
         }
     }
 
     public void volumenUp() {
-        if (estado == true && volumen < 7) {
-            volumen++;
+        if (this.estado == true && this.volumen < 7) {
+            this.volumen++;
         }
     }
 
     public void volumenDown() {
-        if (estado == true && volumen > 0) {
-            volumen--;
+        if (this.estado == true && this.volumen > 0) {
+            this.volumen--;
         }
     }
 
     public boolean getEstado() {
-        return estado;
+        return this.estado;
     }
 
     public Marca getMarca() {
-        return marca;
+        return this.marca;
     }
 
     public int getCanal() {
-        return canal;
+        return this.canal;
     }
 
     public int getVolumen() {
-        return volumen;
+        return this.volumen;
     }
 
     public int getPrecio() {
-        return precio;
+        return this.precio;
     }
 
     public void setMarca(String arg) {
-        marca.setNombre(arg);
+        this.marca.setNombre(arg);
     }
 
     public void setPrecio(int num) {
-        precio = num;
+        this.precio = num;
     }
 
     public void setVolumen(int num) {
-        if (estado == true) {
-            volumen = num;
+        if (this.estado == true && num >= 0 && num <= 7) {
+            this.volumen = num;
         }
     }
 
     public void setCanal(int num) {
-        if (estado == true) {
-            canal = num;
+        if (this.estado == true && num <= 120 && num >= 1) {
+            this.canal = num;
         }
     }
 
     public void setControl(Control ct) {
         // metodo para agregar control
-        control = ct;
+        this.control = ct;
     }
 
 }

@@ -4,44 +4,44 @@ public class Control {
 
     private TV tv;
 
-    public void enlazar(TV tv) {
-        tv.setControl(this);
-        this.tv = tv;
+    public void enlazar(TV arg) {
+        this.tv = arg;
+        this.tv.setControl(this);
     }
 
-    public void setTv(TV tv) {
-        this.enlazar(tv);
+    public void setTv(TV arg) {
+        this.enlazar(arg);
     }
 
     public TV getTv() {
-        return tv;
+        return this.tv;
     }
 
     public void volumenUp() {
-        tv.volumenUp();
+        this.tv.volumenUp();
     }
 
     public void volumenDown() {
-        tv.volumenDown();
+        this.tv.volumenDown();
     }
 
     public void canalUp() {
-        tv.canalUp();
+        this.tv.canalUp();
     }
 
     public void canalDown() {
-        tv.canalDown();
+        this.tv.canalDown();
     }
 
     public void setCanal(int num) {
-        tv.setCanal(num);
+        this.tv.setCanal(num);
     }
 
     public void turnOn() {
-        tv.turnOn();
+        this.tv.turnOn();
     }
 
     public void turnOff() {
-        tv.turnOff();
+        this.tv.turnOff();
     }
 }

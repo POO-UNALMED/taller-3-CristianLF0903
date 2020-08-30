@@ -1,17 +1,17 @@
 package taller3.televisores;
 
 public class Marca {
-    static String name;
+    private String name;
 
     Marca(String arg) {
-        name = arg;
+        this.name = arg;
     }
 
     public String getNombre() {
-        return name;
+        return this.name;
     }
 
     public void setNombre(String arg) {
-        name = arg;
+        this.name = arg;
     }
 }
