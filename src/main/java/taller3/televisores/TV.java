@@ -9,11 +9,11 @@ public class TV {
     private Control control;
     static int numTV;
 
-    public static void setnumTV(int num) {
+    public static void setNumTV(int num) {
         numTV = num;
     }
 
-    public static int getnumTV() {
+    public static int getNumTV() {
         return numTV;
     }
 
