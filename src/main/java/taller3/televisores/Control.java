@@ -6,7 +6,7 @@ public class Control {
 
     public void enlazar(TV arg) {
         this.tv = arg;
-        this.tv.setControl(this);
+        tv.setControl(this);
     }
 
     public void setTv(TV arg) {

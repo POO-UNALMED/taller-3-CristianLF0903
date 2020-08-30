@@ -9,8 +9,8 @@ public class TV {
     private Control control;
     static int numTV;
 
-    public void setnumTV() {
-        numTV++;
+    public void setnumTV(int num) {
+        numTV = num + numTV;
     }
 
     public int getnumTV() {
@@ -20,7 +20,7 @@ public class TV {
     TV(Marca marc, boolean status) {
         this.marca = marc;
         this.estado = status;
-        this.setnumTV();
+        this.setnumTV(1);
     }
 
     public void turnOn() {
@@ -102,6 +102,10 @@ public class TV {
     public void setControl(Control ct) {
         // metodo para agregar control
         this.control = ct;
+    }
+
+    public Control getControl() {
+        return control;
     }
 
 }
