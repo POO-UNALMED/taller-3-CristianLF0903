@@ -10,7 +10,7 @@ public class TV {
     static int numTV;
 
     public static void setnumTV(int num) {
-        numTV = num + numTV;
+        numTV = num;
     }
 
     public static int getnumTV() {
@@ -20,7 +20,7 @@ public class TV {
     public TV(Marca marc, boolean status) {
         this.marca = marc;
         this.estado = status;
-        TV.setnumTV(1);
+        numTV++;
     }
 
     public void turnOn() {
