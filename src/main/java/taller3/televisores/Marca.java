@@ -3,7 +3,7 @@ package taller3.televisores;
 public class Marca {
     String name;
 
-    Marca(String arg) {
+    public Marca(String arg) {
         this.name = arg;
     }
 
