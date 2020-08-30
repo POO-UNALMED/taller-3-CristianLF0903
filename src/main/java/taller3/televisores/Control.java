@@ -2,7 +2,7 @@ package taller3.televisores;
 
 public class Control {
 
-    static TV tv;
+    private TV tv;
 
     public void enlazar(TV tv) {
         tv.setControl(this);
