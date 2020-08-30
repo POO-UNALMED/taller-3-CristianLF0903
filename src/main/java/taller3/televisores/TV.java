@@ -17,7 +17,7 @@ public class TV {
         return numTV;
     }
 
-    TV(Marca marc, boolean status) {
+    public TV(Marca marc, boolean status) {
         this.marca = marc;
         this.estado = status;
         TV.setnumTV(1);
